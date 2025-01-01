@@ -2,8 +2,20 @@ import React from "react";
 import Hero from "../Hero";
 import styled from "styled-components";
 import { whyChooseUs, OurMission } from "../data";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const About = () => {
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  
   return (
     <>
       <Hero />
@@ -68,6 +80,7 @@ const About = () => {
           <div className="our-team">
             <h1>Our Team</h1>
             <p>Lets take a look to our professional team</p>
+            <Slider {...settings}></Slider>
           </div>
         </div>
       </Wrapper>
