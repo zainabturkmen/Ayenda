@@ -92,7 +92,7 @@ const Wrapper = styled.div`
     top: 0;
     left: 0;
     height: 100%;
-    width: 70%;
+    width: 65%;
     background-color: #fff;
     transition: all 0.3s linear;
     transform: translate(-100%);
