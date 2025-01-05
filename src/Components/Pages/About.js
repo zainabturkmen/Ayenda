@@ -26,15 +26,21 @@ const About = () => {
     );
   };
 
+  const bigScreen = window.matchMedia("(min-width:1000px)")
+
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    NextArrow: <NextArrow />,
-    PrevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
+
+  if (bigScreen.matches) {
+    settings.slidesToShow = 2
+  }
 
   return (
     <>
@@ -181,11 +187,11 @@ const Wrapper = styled.div`
 
   .our-team {
     margin: 0 auto;
-    max-width: 950px;
+    max-width: 300px;
   }
 
   .slick-slide > div {
-    margin: 0 20px;
+    margin: 0 10px;
   }
 
   .testimonail {
@@ -214,12 +220,12 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    margin-top: 2.8em;
+    margin-top: 1em;
   }
 
   /* Custom Arrows */
   .arrow {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
@@ -232,7 +238,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer; */
   }
 
   .arrow.next {
@@ -282,6 +288,76 @@ const Wrapper = styled.div`
     .text {
       width: 300px;
       line-height: 2em;
+    }
+
+    /* Slick */
+
+    .our-team {
+      max-width: 950px;
+    }
+
+    .slick-slide > div {
+      margin: 0 20px;
+    }
+
+    .testimonail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 5em 0 2em 0;
+      padding: 2.5em 1em;
+      border-radius: 15.934px;
+      background: #fff;
+      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.42);
+      text-align: center;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      top: -3em;
+      right: 10.5em;
+    }
+
+    .content {
+      gap: 0.5em;
+      margin-top: 2.8em;
+    }
+
+    /* Custom Arrows */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 40px;
+      height: 40px;
+      background: white;
+      color: black;
+      border-radius: 50%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .arrow.next {
+      right: -50px;
+    }
+
+    .arrow.prev {
+      left: -50px;
+    }
+
+    .arrow:hover {
+      background: black;
+      color: white;
+    }
+
+    .slick-list {
+      overflow: hidden;
     }
   }
 `;
