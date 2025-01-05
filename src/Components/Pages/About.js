@@ -199,7 +199,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3em 0 1em 0;
+    margin: 4em 0 1em 0;
     padding: 2.5em 1em;
     border-radius: 15.934px;
     background: #fff;
@@ -226,7 +226,7 @@ const Wrapper = styled.div`
 
   /* Custom Arrows */
   .arrow {
-    /* position: absolute;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
@@ -239,7 +239,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer; */
+    cursor: pointer;
   }
 
   .arrow.next {
