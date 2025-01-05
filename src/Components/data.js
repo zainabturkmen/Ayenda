@@ -12,6 +12,8 @@ import { AiOutlineDeliveredProcedure } from "react-icons/ai";
 import { LiaLowVisionSolid } from "react-icons/lia";
 import { GoGoal } from "react-icons/go";
 
+import user from "../Assets/about/user.svg";
+
 export const links = [
   {
     id: 1,
@@ -116,5 +118,29 @@ export const OurMission = [
     icon: <GoGoal />,
     h3: "Goal",
     text: "With a history of successful campaigns and satisfied clients, we deliver consistent, reliable, and high-quality.",
+  },
+];
+
+export const testimonail = [
+  {
+    id: 1,
+    user: user,
+    h3: "Leticia Kutch",
+    text: "Been going here for years. Through bad tooth genes, yearly check ups and teeth cleaning sessions, they have proven themselves highly competent.",
+    position: "Graphic Designer",
+  },
+  {
+    id: 2,
+    user: user,
+    h3: "Leticia Kutch",
+    text: "Been going here for years. Through bad tooth genes, yearly check ups and teeth cleaning sessions, they have proven themselves highly competent.",
+    position: "Graphic Designer",
+  },
+  {
+    id: 3,
+    user: user,
+    h3: "Leticia Kutch",
+    text: "Been going here for years. Through bad tooth genes, yearly check ups and teeth cleaning sessions, they have proven themselves highly competent.",
+    position: "Graphic Designer",
   },
 ];

@@ -1,21 +1,20 @@
 import React from "react";
 import Hero from "../Hero";
 import styled from "styled-components";
-import { whyChooseUs, OurMission } from "../data";
+import { whyChooseUs, OurMission, testimonail } from "../data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const About = () => {
-
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
   };
-  
+
   return (
     <>
       <Hero />
@@ -80,7 +79,23 @@ const About = () => {
           <div className="our-team">
             <h1>Our Team</h1>
             <p>Lets take a look to our professional team</p>
-            <Slider {...settings}></Slider>
+            <div className="main-div">
+              <Slider {...settings}>
+                {testimonail.map((t) => {
+                  const { id, user, h3, text, position } = t;
+                  return (
+                    <div className="testimonail" key={id}>
+                      <img src={user} alt="user" />
+                      <div className="content">
+                        <h3>{h3}</h3>
+                        <p className="text">{text}</p>
+                        <h4>{position}</h4>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
           </div>
         </div>
       </Wrapper>
@@ -97,6 +112,7 @@ const Wrapper = styled.div`
     text-align: center;
     gap: 4em;
     padding-top: 2em;
+    margin-bottom: 2em;
   }
 
   h1,
@@ -118,11 +134,6 @@ const Wrapper = styled.div`
     line-height: 180%;
   }
 
-  /* .sub-container {
-    width: 320px;
-    margin: 0 auto;
-  } */
-
   .card {
     display: flex;
     flex-direction: column;
@@ -143,6 +154,71 @@ const Wrapper = styled.div`
   .text {
     width: 239px;
     font-size: 16px;
+  }
+
+  /* Slick */
+
+  .our-team {
+    margin: 0 auto;
+    max-width: 950px;
+  }
+
+  .slick-slide > div {
+    margin: 0 20px;
+  }
+
+  .testimonail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0 2em 0;
+    padding: 2.5em 1em;
+    border-radius: 15.934px;
+    background: #fff;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.42);
+    text-align: center;
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    top: -3em;
+    right: 10.5em;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 2.8em;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .slick-prev {
+    left: -50px; /* Adjust this value to bring the button into view */
+  }
+
+  .slick-next {
+    right: -50px; /* Adjust this value to bring the button into view */
   }
 
   @media (min-width: 1000px) {
