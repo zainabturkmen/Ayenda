@@ -5,14 +5,35 @@ import { whyChooseUs, OurMission, testimonail } from "../data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+
+
 
 const About = () => {
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+        <GrFormNext />
+      </div>
+    );
+  };
+
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <GrFormPrevious />
+      </div>
+    );
+  };
+
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    NextArrow: <NextArrow />,
+    PrevArrow: <PrevArrow />,
   };
 
   return (
@@ -196,29 +217,39 @@ const Wrapper = styled.div`
     margin-top: 2.8em;
   }
 
-  .slick-prev,
-  .slick-next {
+  /* Custom Arrows */
+  .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 50%;
     width: 40px;
     height: 40px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
   }
 
-  .slick-prev {
-    left: -50px; /* Adjust this value to bring the button into view */
+  .arrow.next {
+    right: -50px;
   }
 
-  .slick-next {
-    right: -50px; /* Adjust this value to bring the button into view */
+  .arrow.prev {
+    left: -50px;
+  }
+
+  .arrow:hover {
+    background: black;
+    color: white;
+  }
+
+  .slick-list {
+    overflow: hidden;
   }
 
   @media (min-width: 1000px) {
