@@ -115,7 +115,7 @@ const About = () => {
                       <img src={user} alt="user" />
                       <div className="content">
                         <h3>{h3}</h3>
-                        <p className="text">{text}</p>
+                        <p className="textp">{text}</p>
                         <h4>{position}</h4>
                       </div>
                     </div>
@@ -180,14 +180,19 @@ const Wrapper = styled.div`
   }
   .text {
     width: 239px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   /* Slick */
 
   .our-team {
     margin: 0 auto;
-    max-width: 300px;
+    max-width: 250px;
+  }
+
+  .textp {
+    width: 200px;
+    font-size: 12px;
   }
 
   .slick-slide > div {
@@ -199,8 +204,8 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4em 0 1em 0;
-    padding: 2.5em 1em;
+    margin: 4.5em 0 1em 0;
+    padding: 1.5em 1em;
     border-radius: 15.934px;
     background: #fff;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.42);
@@ -211,7 +216,7 @@ const Wrapper = styled.div`
   img {
     position: absolute;
     top: -3em;
-    right: 6.2em;
+    right:5em;
     width: 5em;
   }
 
@@ -220,7 +225,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 1em;
     margin-top: 1em;
   }
 
@@ -228,10 +233,10 @@ const Wrapper = styled.div`
   .arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    /* transform: translatey(-50%); */
     z-index: 1;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background: white;
     color: black;
     border-radius: 50%;
@@ -243,11 +248,11 @@ const Wrapper = styled.div`
   }
 
   .arrow.next {
-    right: -50px;
+    right: -30px;
   }
 
   .arrow.prev {
-    left: -50px;
+    left: -30px;
   }
 
   .arrow:hover {
