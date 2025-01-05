@@ -180,7 +180,7 @@ const Wrapper = styled.div`
   }
   .text {
     width: 239px;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   /* Slick */
@@ -199,7 +199,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5em 0 2em 0;
+    margin: 3em 0 1em 0;
     padding: 2.5em 1em;
     border-radius: 15.934px;
     background: #fff;
@@ -211,7 +211,8 @@ const Wrapper = styled.div`
   img {
     position: absolute;
     top: -3em;
-    right: 10.5em;
+    right: 6.2em;
+    width: 5em;
   }
 
   .content {
