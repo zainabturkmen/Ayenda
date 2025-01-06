@@ -124,7 +124,7 @@ const SliderWrapper = styled.div`
   }
 
   .slick-dots li.slick-active button:before {
-    color: #007bff;
+    color: white;
   }
 
   @media (min-width: 768px) {
