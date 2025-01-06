@@ -107,11 +107,12 @@ const Footer = () => {
 };
 
 const Wrapper = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+
   .container,
   .container1 {
     display: flex;
@@ -192,13 +193,14 @@ background-color: #000;
     .container1 {
       flex-direction: row;
       text-align: start;
+      align-items: start;
+      gap: 3em;
     }
 
-    .div{
+    .div {
       justify-content: start;
       align-items: start;
     }
-
   }
 `;
 
