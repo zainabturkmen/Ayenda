@@ -153,21 +153,29 @@ export const sliderData = [
   {
     id: 1,
     image: img1,
-    text: "Welcome to Our Website",
+    text: "Crafting Stories That Matter",
+    p: "From planning to delivery, we’re here to turn your ideas into impactful productions. Your journey starts here.",
+    url: "/services",
   },
   {
     id: 2,
     image: img2,
     text: "Explore Our Services",
+    p: "From planning to delivery, we’re here to turn your ideas into impactful productions. Your journey starts here.",
+    url: "/services",
   },
   {
     id: 3,
     image: img3,
     text: "Join Our Community",
+    p: "From planning to delivery, we’re here to turn your ideas into impactful productions. Your journey starts here.",
+    url: "/services",
   },
   {
     id: 3,
     image: img4,
     text: "Join Our Community",
+    p: "From planning to delivery, we’re here to turn your ideas into impactful productions. Your journey starts here.",
+    url: "/services",
   },
 ];

@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { sliderData } from "../data";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const NextArrow = ({ onClick }) => {
@@ -43,7 +44,11 @@ const Home = () => {
             <div
               className="background"
               style={{ backgroundImage: `url(${slide.image})` }}>
-              <div className="text-overlay">{slide.text}</div>
+              <div className="text-overlay">
+                <h1>{slide.text}</h1>
+                <p>{slide.p}</p>
+                <Link to="/services" className="explore">Explore</Link>
+              </div>
             </div>
           </div>
         ))}
@@ -88,11 +93,27 @@ const SliderWrapper = styled.div`
   }
 
   .text-overlay {
-    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+  }
+
+  h1 {
+    color: var(--primary-yellow-color);
     font-size: 1em; /* Smaller font size for mobile */
     font-weight: bold;
     text-align: center;
     z-index: 10;
+  }
+
+  p {
+    font-size: 0.4em;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    width: 250px;
   }
 
   .arrow {
@@ -127,6 +148,18 @@ const SliderWrapper = styled.div`
     color: white;
   }
 
+  .explore{
+    background-color: var(--primary-yellow-color);
+    color: white;
+    padding: .4em 1em;
+    text-align: center;
+    font-size: .4em;
+    border-radius: 10px;
+    z-index: 10;
+
+  } 
+  
+  
   @media (min-width: 768px) {
     /* Tablet and larger screens */
     .slide {
@@ -145,6 +178,10 @@ const SliderWrapper = styled.div`
 
     .slick-dots li button:before {
       font-size: 10px;
+    }
+
+    p{
+      width: 700px;
     }
   }
 
