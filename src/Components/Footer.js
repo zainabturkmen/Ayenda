@@ -195,11 +195,18 @@ const Wrapper = styled.div`
       text-align: start;
       align-items: start;
       gap: 3em;
+      padding-top: 3em;
+      margin-bottom: -1em;
     }
 
     .div {
       justify-content: start;
       align-items: start;
+      gap: 1em;
+    }
+
+    p{
+      margin-top: -1em;
     }
   }
 `;
