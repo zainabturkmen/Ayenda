@@ -153,7 +153,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.5em;                                                                                                             
   }
   h3,
   .link {

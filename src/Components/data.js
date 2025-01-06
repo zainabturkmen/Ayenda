@@ -11,8 +11,12 @@ import { GiStairsGoal } from "react-icons/gi";
 import { AiOutlineDeliveredProcedure } from "react-icons/ai";
 import { LiaLowVisionSolid } from "react-icons/lia";
 import { GoGoal } from "react-icons/go";
-
 import user from "../Assets/about/user.svg";
+
+import img1 from "../Assets/slider/img3.png";
+import img2 from "../Assets/slider/img.jpg";
+import img3 from "../Assets/slider/img2.jpg";
+import img4 from "../Assets/slider/img1.jpg";
 
 export const links = [
   {
@@ -142,5 +146,28 @@ export const testimonail = [
     h3: "Leticia Kutch",
     text: "Been going here for years. Through bad tooth genes, yearly check ups and teeth cleaning sessions, they have proven themselves highly competent.",
     position: "Graphic Designer",
+  },
+];
+
+export const sliderData = [
+  {
+    id: 1,
+    image: img1,
+    text: "Welcome to Our Website",
+  },
+  {
+    id: 2,
+    image: img2,
+    text: "Explore Our Services",
+  },
+  {
+    id: 3,
+    image: img3,
+    text: "Join Our Community",
+  },
+  {
+    id: 3,
+    image: img4,
+    text: "Join Our Community",
   },
 ];
