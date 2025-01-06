@@ -291,9 +291,10 @@ const Wrapper = styled.div`
       width: 380px;
     }
 
-    .text {
+    .textp {
       width: 300px;
       line-height: 2em;
+      font-size: 1em;
     }
 
     /* Slick */
