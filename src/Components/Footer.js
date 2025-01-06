@@ -167,7 +167,7 @@ const Wrapper = styled.div`
   .icon {
     background-color: #fff; /* White background */
     color: #000; /* Black color for the icon */
-    padding: .5em; /* Padding around the icon */
+    padding: 0.5em; /* Padding around the icon */
     border-radius: 50%; /* Rounded border */
     display: inline-flex; /* Align icon properly */
     justify-content: center; /* Center the icon horizontally */

@@ -139,7 +139,7 @@ const Wrapper = styled.div`
     text-align: center;
     gap: 4em;
     padding-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
   }
 
   h1,
