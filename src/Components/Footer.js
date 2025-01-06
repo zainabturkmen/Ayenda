@@ -17,57 +17,59 @@ const Footer = () => {
   return (
     <Wrapper>
       <div className="container">
-        {/* Ayenda */}
-        <div className="div">
-          <img src={goldenLogo} alt="logo" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus
-            placerat velit. Donec in porttitor elit. Suspendisse accumsan
-            iaculis tincidunt. placerat velit.
-          </p>
-          <h3> All Rights Reserved &copy; {currentYear}</h3>
-        </div>
-
-        {/* Get In Touch */}
-        <div className="div">
-          <h2>Get in Touch</h2>
-          <div className="icon-text">
-            <SlLocationPin />
-            <h3>Shahre Naow, Kabul Afghanistan </h3>
+        <div className="container1">
+          {/* Ayenda */}
+          <div className="div">
+            <img src={goldenLogo} alt="logo" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              dapibus placerat velit. Donec in porttitor elit. Suspendisse
+              accumsan iaculis tincidunt. placerat velit.
+            </p>
+            <h3> All Rights Reserved &copy; {currentYear}</h3>
           </div>
-          <div className="icon-text">
-            <MdOutlineEmail />
-            <h3>production.com</h3>
-          </div>
-          <div className="icon-text">
-            <MdOutlineLocalPhone />
-            <h3>+93 73 112 8886</h3>
-          </div>
-        </div>
 
-        {/* Quick Links */}
-        <div className="div">
-          <h2>Quick Links</h2>
-          <Link to="/services" className="link">
-            Services
-          </Link>
-          <Link to="/projects" className="link">
-            Portfolios
-          </Link>
-          <Link to="/contact" className="link">
-            Contact us
-          </Link>
-        </div>
+          {/* Get In Touch */}
+          <div className="div">
+            <h2>Get in Touch</h2>
+            <div className="icon-text">
+              <SlLocationPin />
+              <h3>Shahre Naow, Kabul Afghanistan </h3>
+            </div>
+            <div className="icon-text">
+              <MdOutlineEmail />
+              <h3>production.com</h3>
+            </div>
+            <div className="icon-text">
+              <MdOutlineLocalPhone />
+              <h3>+93 73 112 8886</h3>
+            </div>
+          </div>
 
-        {/* Legal Information */}
-        <div className="div">
-          <h2>Legal Information</h2>
-          <Link to="/" className="link">
-            Terms of service
-          </Link>
-          <Link to="/" className="link">
-            Privacy policy
-          </Link>
+          {/* Quick Links */}
+          <div className="div">
+            <h2>Quick Links</h2>
+            <Link to="/services" className="link">
+              Services
+            </Link>
+            <Link to="/projects" className="link">
+              Portfolios
+            </Link>
+            <Link to="/contact" className="link">
+              Contact us
+            </Link>
+          </div>
+
+          {/* Legal Information */}
+          <div className="div">
+            <h2>Legal Information</h2>
+            <Link to="/" className="link">
+              Terms of service
+            </Link>
+            <Link to="/" className="link">
+              Privacy policy
+            </Link>
+          </div>
         </div>
 
         <div className="social">
@@ -105,17 +107,20 @@ const Footer = () => {
 };
 
 const Wrapper = styled.div`
-  .container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: #000;
+  .container,
+  .container1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* width: 300px; */
-    background-color: #000000;
     color: #fff;
     text-align: center;
     gap: 2em;
-    padding: 2em 0;
   }
 
   img {
@@ -158,6 +163,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     gap: 2em;
+    margin-bottom: 1em;
   }
 
   li {
@@ -180,6 +186,19 @@ const Wrapper = styled.div`
   .icon:hover {
     background-color: #000; /* Black background on hover */
     color: #fff; /* White icon color on hover */
+  }
+
+  @media (min-width: 1000px) {
+    .container1 {
+      flex-direction: row;
+      text-align: start;
+    }
+
+    .div{
+      justify-content: start;
+      align-items: start;
+    }
+
   }
 `;
 
