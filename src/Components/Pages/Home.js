@@ -128,11 +128,11 @@ const SliderWrapper = styled.div`
   }
 
   .arrow.next {
-    right: 3em;
+    right: 2em;
   }
 
   .arrow.prev {
-    left: 3em;
+    left: 2em;
   }
 
   .slick-dots {
