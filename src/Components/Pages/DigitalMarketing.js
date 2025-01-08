@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import backimg from "../../Assets/digitalMarketing/digital.png";
 import dots from "../../Assets/about/dots.png";
-import seoImg from "../../Assets/digitalMarketing/seo.png";
 import { digitalMarketing } from "../data";
 
 const Hero = () => {
