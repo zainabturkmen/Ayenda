@@ -33,7 +33,7 @@ const DigitalMarketing = () => {
         <div className="container">
           <h1>SEO Services</h1>
           <div className="Seo">
-            <img src={seoImg} alt="seo image" />
+            <img src={seoImg} alt="seo" />
             <div className="content">
               <h3>Be Found, Be Seen.</h3>
               <p>
