@@ -3,6 +3,7 @@ import styled from "styled-components";
 import backimg from "../../Assets/digitalMarketing/digital.png";
 import dots from "../../Assets/about/dots.png";
 import seoImg from "../../Assets/digitalMarketing/seo.png";
+import { digitalMarketing } from "../data";
 
 const Hero = () => {
   return (
@@ -30,21 +31,23 @@ const DigitalMarketing = () => {
     <Wrapper>
       <Hero />
       <div className="main-container">
-        <div className="container">
-          <h1>SEO Services</h1>
-          <div className="Seo">
-            <img src={seoImg} alt="seo" />
-            <div className="content">
-              <h3>Be Found, Be Seen.</h3>
-              <p>
-                Rank higher on search engines and attract more organic traffic
-                with our expert SEO strategies. From on-page optimization to
-                keyword research and technical SEO, we ensure your website is
-                optimized for success.
-              </p>
+        {digitalMarketing.map((d, index) => {
+          const { id, image, h1, h3, p } = d;
+          return (
+            <div
+              className={`container ${index % 2 === 1 ? "reverse" : ""}`}
+              key={id}>
+              <h1>{h1}</h1>
+              <div className="Seo">
+                <img src={image} alt="seo" />
+                <div className="content">
+                  <h3>{h3}</h3>
+                  <p>{p}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </Wrapper>
   );
@@ -110,6 +113,10 @@ const Wrapper = styled.div`
     .Seo {
       width: 1200px;
       flex-direction: row;
+    }
+
+    .container.reverse .Seo {
+      flex-direction: row-reverse;
     }
 
     .content {

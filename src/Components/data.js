@@ -18,6 +18,10 @@ import img2 from "../Assets/slider/img.jpg";
 import img3 from "../Assets/slider/img2.jpg";
 import img4 from "../Assets/slider/img1.jpg";
 
+// digital Marketing
+import seoImg from "../Assets/digitalMarketing/seo.png";
+
+
 export const links = [
   {
     id: 1,
@@ -179,3 +183,50 @@ export const sliderData = [
     url: "/services",
   },
 ];
+
+
+export const digitalMarketing = [
+  {
+    id: 1,
+    image: seoImg,
+    h1: "SEO Services",
+    h3: "Be Found, Be Seen.",
+    p: "Rank higher on search engines and attract more organic traffic with our expert SEO strategies.From on-page optimization to keyword research and technical SEO, we ensure your website is optimized for success.",
+  },
+  {
+    id: 2,
+    image: seoImg,
+    h1: "Social Media Marketing (SMM)",
+    h3: "Turn Followers into Loyal Customers.",
+    p: "Connect with your audience through targeted social media campaigns on Instagram, Facebook, LinkedIn, TikTok, and more. We create engaging content, run strategic ads, and foster community growth for your brand.",
+  },
+  {
+    id: 3,
+    image: seoImg,
+    h1: "Content Marketing",
+    h3: "Content That Inspires and Converts.",
+    p: "We produce blogs, videos, infographics, and more that capture your brand’s voice and resonate with your audience. Our goal: to educate, inspire, and convert visitors into loyal customers.",
+  },
+  {
+    id: 4,
+    image: seoImg,
+    h1: "Paid Advertising",
+    h3: "Maximize ROI with Precision Targeting..",
+    p: "Get instant results with strategic ad campaigns across Google Ads, Facebook Ads, and other platforms. Our data-driven approach ensures your ads reach the right people at the right time, driving leads and sales..",
+  },
+  {
+    id: 5,
+    image: seoImg,
+    h1: "Branding & Graphic Design",
+    h3: "Creative Designs That Tell Your Story.",
+    p: "Make a lasting impression with stunning logos, visual branding, social media graphics, and marketing materials. We help define your brand’s identity and communicate it through powerful, cohesive visuals.",
+  },
+  {
+    id: 6,
+    image: seoImg,
+    h1: "Analytics & Reporting",
+    h3: "Measure, Optimize, Repeat.",
+    p: "We track the performance of your campaigns with detailed analytics and actionable insights.From web traffic to conversion rates, we ensure your marketing efforts are continually optimized for success.",
+  },
+];
+
