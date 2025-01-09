@@ -19,6 +19,7 @@ const Footer = () => {
       <div className="container">
         <div className="container1">
           {/* Ayenda */}
+          {/* Ayenda */}
           <div className="div">
             <img src={goldenLogo} alt="logo" />
             <p>
