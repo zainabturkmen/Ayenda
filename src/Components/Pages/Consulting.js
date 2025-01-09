@@ -3,6 +3,7 @@ import styled from "styled-components";
 import backimg from "../../Assets/consulting/back.png";
 import dots from "../../Assets/about/dots.png";
 import { consulting } from "../data";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -47,6 +48,19 @@ const Consulting = () => {
             </div>
           );
         })}
+
+        <div className="consulting">
+          <h1>Book a Free Consulting</h1>
+          <p>
+            "Your Growth Journey Starts Here. Schedule a free consultation with
+            our experts to discuss your needs, challenges, and goals. Together,
+            we’ll craft a strategy that delivers results. Click below to book
+            your session today!
+          </p>
+          <Link to="/contact" className="link">
+            Book a Free Consultation
+          </Link>
+        </div>
       </div>
     </Wrapper>
   );
@@ -102,6 +116,17 @@ const Wrapper = styled.div`
     text-align: center;
   }
 
+  /* consulting */
+
+  .consulting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+  }
+
   @media (min-width: 1000px) {
     .container {
       max-width: 1100px;
@@ -142,13 +167,3 @@ const Wrapper = styled.div`
 `;
 
 export default Consulting;
-
-// import React from 'react'
-
-// const Consulting = () => {
-//   return (
-//     <div>Consulting</div>
-//   )
-// }
-
-// export default Consulting
