@@ -19,6 +19,7 @@ const Footer = () => {
       <div className="container">
         <div className="container1">
           {/* Ayenda */}
+          {/* Ayenda */}
           <div className="div">
             <img src={goldenLogo} alt="logo" />
             <p>
@@ -153,7 +154,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5em;                                                                                                             
+    gap: 0.5em;
   }
   h3,
   .link {
@@ -205,7 +206,7 @@ const Wrapper = styled.div`
       gap: 1em;
     }
 
-    p{
+    p {
       margin-top: -1em;
     }
   }
