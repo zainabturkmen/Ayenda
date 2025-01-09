@@ -20,7 +20,11 @@ import img4 from "../Assets/slider/img1.jpg";
 
 // digital Marketing
 import seoImg from "../Assets/digitalMarketing/seo.png";
+// Production
+import img from "../Assets/production/img.png";
 
+// consulting
+import consulting1 from "../Assets/consulting/cosulting.png";
 
 export const links = [
   {
@@ -184,7 +188,6 @@ export const sliderData = [
   },
 ];
 
-
 export const digitalMarketing = [
   {
     id: 1,
@@ -230,3 +233,71 @@ export const digitalMarketing = [
   },
 ];
 
+export const production = [
+  {
+    id: 1,
+    image: img,
+    h1: "Photography",
+    h3: "Capture Every Moment, Every Story.",
+    p: "We provide professional photography services for weddings, parties, events, corporate shoots, product photography, and lifestyle sessions. Whether it’s a personal celebration or a professional project, we capture stunning visuals that leave a lasting impression.",
+  },
+  {
+    id: 2,
+    image: img,
+    h1: "Videography",
+    h3: "Videos That Speak Volumes.",
+    p: "We create cinematic videos for weddings, parties, corporate events, promotional campaigns, product launches, and more. From dynamic storytelling to impactful event coverage, we transform your vision into memorable video experiences.",
+  },
+  {
+    id: 3,
+    image: img,
+    h1: "Post-Production",
+    h3: "Perfecting Every Frame.",
+    p: "Our expert editors bring your footage to life with: Video Editing: Seamless transitions, color grading, and cinematic effects. Sound Design: Crisp, clear audio that enhances  Motion Graphics: Engaging animations for added visual appeal. We ensure every detail is polished to perfection",
+  },
+  {
+    id: 4,
+    image: img,
+    h1: " Brand Design",
+    h3: "Designs That Define Your Identity.",
+    p: "From logos to business cards and marketing materials, we create visuals that reflect your brand’s personality. We help you stand out with cohesive, innovative designs tailored to your vision.",
+  },
+  {
+    id: 5,
+    image: img,
+    h1: "Event Management",
+    h3: "Your Event, Our Expertise.",
+    p: "We plan and manage events with precision and creativity. From corporate conferences to social gatherings and product launches, we handle every detail—from logistics and vendor coordination to on-site execution. Your event, done flawlessly.",
+  },
+];
+
+export const consulting = [
+  {
+    id: 1,
+    image: consulting1,
+    h1: "Marketing Strategy",
+    h3: "Plan Smart, Execute Better.",
+    p: "We build tailored marketing strategies to help you grow your audience, boost conversions, and stay ahead of the competition. We create customized marketing strategies designed to expand your audience, increase conversions, and keep you ahead ",
+  },
+  {
+    id: 2,
+    image: consulting1,
+    h1: "Brand Identity Consulting",
+    h3: "Build a Brand That Stands Out.",
+    p: "From your visuals to your voice, we refine your brand’s identity to ensure it resonates with your audience. We create consistency and recognition, leaving a lasting impression on customers.",
+  },
+  {
+    id: 3,
+    image: consulting1,
+    h1: "Market Research & Analytics",
+    h3: "Insights That Drive Smart Decisions.",
+    p: "Our in-depth market research and analytics provide valuable insights into customer behavior, market trends, and competitors. Make informed decisions with data that leads to success.",
+  },
+  {
+    id: 4,
+    image: consulting1,
+    h1: "Scale Smart, Grow Fast.",
+    h3: "Scale Smart, Grow Fast.",
+    p: "We help businesses optimize operations, streamline workflows, and identify new growthopportunities. From improving efficiency to scaling strategies, we empower your business to thrive.",
+  },
+];
