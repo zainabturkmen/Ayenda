@@ -67,6 +67,9 @@ const Consulting = () => {
 };
 
 const Wrapper = styled.div`
+  .main-container {
+    margin: 2em 0;
+  }
   .container {
     margin: 2em 0;
     display: flex;
@@ -124,7 +127,16 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 1em;
+    gap: 0.3em;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .link {
+    background-color: var(--primary-yellow-color);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    margin-top: 1em;
   }
 
   @media (min-width: 1000px) {
@@ -162,6 +174,11 @@ const Wrapper = styled.div`
     }
     p {
       font-size: 21px;
+    }
+
+    .consulting {
+      width: 1000px;
+      margin-top: 4em;
     }
   }
 `;
