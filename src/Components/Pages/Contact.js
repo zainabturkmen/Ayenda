@@ -208,10 +208,37 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 1000px) {
+    .container {
+      width: 1000px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size:20px;
+    }
+
     .div {
       justify-content: start;
       align-items: start;
-      gap: 1em;
+      gap: 2em;
+    }
+
+    .form-content {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 6em;
+      margin: 2em 0;
+    }
+
+    .fullName {
+      display: flex;
+      flex-direction: row;
+    }
+    .email, .number, textarea, button {
+      width: 710px;
     }
   }
 `;
