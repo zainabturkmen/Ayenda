@@ -217,7 +217,7 @@ const Wrapper = styled.div`
     }
 
     p {
-      font-size:20px;
+      font-size: 20px;
     }
 
     .div {
@@ -237,7 +237,10 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction: row;
     }
-    .email, .number, textarea, button {
+    .email,
+    .number,
+    textarea,
+    button {
       width: 710px;
     }
   }
