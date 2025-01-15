@@ -17,7 +17,7 @@ const Hero = () => {
         content, and professional design.
       </p>
       <img
-        src={dots} 
+        src={dots}
         alt="dots"
         className="absolute -z-10 left-[-2em] top-[5em] md:w-[80%] md:left-[-4em] md:top-[2em]"
       />
