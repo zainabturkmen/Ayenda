@@ -133,6 +133,30 @@ export const OurMission = [
   },
 ];
 
+export const ourTeam = [
+  {
+    id: 1,
+    user: user,
+    h3: "Leticia Kutch",
+    text: "Been going here for years. Through bad tooth genes, yearly check ups and teeth cleaning sessions, they have proven themselves highly competent.",
+    position: "Graphic Designer",
+  },
+  {
+    id: 2,
+    user: user,
+    h3: "Leticia Kutch",
+    text: "Been going here for years. Through bad tooth genes, yearly check ups and teeth cleaning sessions, they have proven themselves highly competent.",
+    position: "Graphic Designer",
+  },
+  {
+    id: 3,
+    user: user,
+    h3: "Leticia Kutch",
+    text: "Been going here for years. Through bad tooth genes, yearly check ups and teeth cleaning sessions, they have proven themselves highly competent.",
+    position: "Graphic Designer",
+  },
+];
+
 export const testimonail = [
   {
     id: 1,
@@ -156,6 +180,8 @@ export const testimonail = [
     position: "Graphic Designer",
   },
 ];
+
+
 
 export const sliderData = [
   {

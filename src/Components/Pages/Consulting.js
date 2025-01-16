@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div
-      className="relative flex flex-col justify-center items-center h-[14vh] bg-cover bg-center bg-no-repeat md:h-[35vh]"
+      className="relative flex flex-col justify-center items-center h-[20vh] bg-cover bg-center bg-no-repeat md:h-[35vh]"
       style={{ backgroundImage: `url(${backimg})` }}>
       <h1 className="text-center text-[21px] font-normal leading-[172%] text-primary-yellow md:text-[47px]">
         Consulting

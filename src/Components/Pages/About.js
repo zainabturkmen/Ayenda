@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../Hero";
 import styled from "styled-components";
-import { whyChooseUs, OurMission, testimonail } from "../data";
+import { whyChooseUs, OurMission, ourTeam } from "../data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -108,7 +108,7 @@ const About = () => {
             <p>Lets take a look to our professional team</p>
             <div className="main-div">
               <Slider {...settings}>
-                {testimonail.map((t) => {
+                {ourTeam.map((t) => {
                   const { id, user, h3, text, position } = t;
                   return (
                     <div className="testimonail" key={id}>
@@ -269,7 +269,16 @@ const Wrapper = styled.div`
       max-width: 1400px;
       gap: 7em;
       margin-top: 2em;
-    }
+    }￼￼
+Home
+About
+Services
+Projects
+Blog
+Contact
+Services
+￼
+Lorem ipsum dolor sit amet, 
     h1 {
       font-size: 36px;
     }
