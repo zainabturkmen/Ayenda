@@ -168,14 +168,14 @@ export const projects = [
     images1: image1,
     images2: image2,
     images3: image3,
-    category: " Creative Production",
+    category: " Production",
   },
   {
     id: 2,
     images1: image1,
     images2: image2,
     images3: image3,
-    category: "Digital Marketing",
+    category: " Marketing",
   },
   {
     id: 3,
