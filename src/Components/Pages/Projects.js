@@ -110,7 +110,9 @@ const Projects = () => {
               return (
                 <button
                   type="button"
-                  className="filter-btn"
+                  className={`filter-btn ${
+                    activeCategory === category ? "active" : ""
+                  }`}
                   key={index}
                   onClick={() => filterProjects(category)}
                 >
@@ -241,9 +243,14 @@ const Wrapper = styled.div`
     margin: 1em 0;
   }
   .filter-btn {
+    font-size: 0.7em;
+    margin-bottom: 2em;
+  }
+
+  .filter-btn.active {
+    transition: all 0.3s ease;
     border-bottom: 2px solid var(--primary-yellow-color);
     color: var(--primary-yellow-color);
-    font-size: 1.1em;
   }
 
   /* Projects image  */
@@ -364,6 +371,11 @@ const Wrapper = styled.div`
     }
 
     /* Projects */
+
+    .filter-btn {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+    }
 
     .img-container {
       display: flex;
