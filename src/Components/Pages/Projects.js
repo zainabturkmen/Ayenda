@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import backimg from "../../Assets/projects/back.png";
 import dots from "../../Assets/about/dots.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { testimonail } from "../data";
+import { testimonail, projects } from "../data";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,13 +13,13 @@ const Hero = () => {
   return (
     <div
       className="relative flex flex-col justify-center items-center h-[20vh] bg-cover bg-center bg-no-repeat md:h-[35vh]"
-      style={{ backgroundImage: `url(${backimg})` }}>
+      style={{ backgroundImage: `url(${backimg})` }}
+    >
       <h1 className="text-center text-[21px] font-normal leading-[172%] text-primary-yellow md:text-[47px]">
-        Digital Marketing
+        Discover Our Projects
       </h1>
       <p className="text-white w-1/1 text-center text-[12px] md:text-[20px]">
-        Empowering your brand with online marketing strategies, creative
-        content, and professional design.
+        Explore our highlights in production, marketing, and consulting
       </p>
       <img
         src={dots}
@@ -30,7 +30,27 @@ const Hero = () => {
   );
 };
 
+const allCategories = [
+  "all",
+  ...new Set(projects.map((project) => project.category)),
+];
+console.log(allCategories);
+
 const Projects = () => {
+  // Projects Category
+  const [menuItems, setMenueItems] = useState(projects);
+  const [categories, setCategories] = useState(allCategories);
+
+  const filterProjects = (category) => {
+    if (category === "all") {
+      setMenueItems(projects);
+      return;
+    }
+    const newProjects = projects.filter(
+      (project) => project.category === category
+    );
+    setMenueItems(newProjects);
+  };
 
   const NextArrow = ({ onClick }) => {
     return (
@@ -48,7 +68,7 @@ const Projects = () => {
     );
   };
 
-  const bigScreen = window.matchMedia("(min-width:1000px)")
+  const bigScreen = window.matchMedia("(min-width:1000px)");
 
   var settings = {
     dots: true,
@@ -61,9 +81,8 @@ const Projects = () => {
   };
 
   if (bigScreen.matches) {
-    settings.slidesToShow = 2
+    settings.slidesToShow = 2;
   }
-
 
   return (
     <Wrapper>
@@ -81,32 +100,74 @@ const Projects = () => {
         </div>
 
         {/* Projects */}
-        <div className="projects">
-          
+        <div className="projects-container">
+          <h1>Our Impactful Work</h1>
+
+          <div className="btn-container">
+            {categories.map((category, index) => {
+              return (
+                <button
+                  type="button"
+                  className="filter-btn"
+                  key={index}
+                  onClick={() => filterProjects(category)}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="projects">
+            {menuItems.map((p) => {
+              const { id, images1, images2, images3 } = p;
+              return (
+                <div className="img-container">
+                  <div className="first-div" key={id}>
+                    <img
+                      src={images1}
+                      alt="projects image"
+                      className="rotate-img"
+                    />
+                    <img
+                      src={images2}
+                      alt="projects image"
+                      className="rotate-img"
+                    />
+                  </div>
+                  <img
+                    src={images3}
+                    alt="projects image"
+                    className="rotate-img"
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Our Team */} 
+        {/* Our Team */}
         <div className="our-team">
-            <h1>Our Team</h1>
-            <p>Lets take a look to our professional team</p>
-            <div className="main-div">
-              <Slider {...settings}>
-                {testimonail.map((t) => {
-                  const { id, user, h3, text, position } = t;
-                  return (
-                    <div className="testimonail" key={id}>
-                      <img src={user} alt="user" />
-                      <div className="content">
-                        <h3>{h3}</h3>
-                        <p className="textp">{text}</p>
-                        <h4>{position}</h4>
-                      </div>
+          <h1>Our Team</h1>
+          <p>Lets take a look to our professional team</p>
+          <div className="main-div">
+            <Slider {...settings}>
+              {testimonail.map((t) => {
+                const { id, user, h3, text, position } = t;
+                return (
+                  <div className="testimonail" key={id}>
+                    <img src={user} alt="user" className="user" />
+                    <div className="content">
+                      <h3>{h3}</h3>
+                      <p className="textp">{text}</p>
+                      <h4>{position}</h4>
                     </div>
-                  );
-                })}
-              </Slider>
-            </div>
+                  </div>
+                );
+              })}
+            </Slider>
           </div>
+        </div>
 
         {/* content */}
         <div className="content">
@@ -167,7 +228,35 @@ const Wrapper = styled.div`
     margin-top: 1em;
   }
 
+  /* Projects */
 
+  /* buttons */
+  .btn-container{
+    display: flex;
+    gap: 2em;
+  }
+
+  /* Projects image  */
+  .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    margin-bottom: -1em;
+  }
+
+  .rotate-img {
+    width: 120px;
+    transform: rotate(45deg);
+  }
   /* Slick */
 
   .our-team {
@@ -179,7 +268,7 @@ const Wrapper = styled.div`
     font-size: 12px;
   }
 
-  h3{
+  h3 {
     font-size: 1em;
   }
 
@@ -201,7 +290,7 @@ const Wrapper = styled.div`
     position: relative;
   }
 
-  img {
+  .user {
     position: absolute;
     top: -3em;
     right: 4.5em;
@@ -252,7 +341,6 @@ const Wrapper = styled.div`
     overflow: hidden;
   }
 
-
   @media (min-width: 1000px) {
     .container {
       width: 1000px;
@@ -262,23 +350,46 @@ const Wrapper = styled.div`
     }
 
     p {
-      font-size:20px;
+      font-size: 20px;
     }
 
+    /* Projects */
+
+    .img-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 7em;
+    }
+
+    .first-div {
+      margin-bottom: 0;
+      gap: 0;
+    }
+
+    .rotate-img {
+      width: 350px;
+      transform: rotate(0);
+      transition: all 0.3s linear;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
     /* Slick */
 
     .our-team {
       max-width: 950px;
     }
-    h3{
+    h3 {
       font-size: 1.5em;
     }
 
-    h4{
+    h4 {
       font-size: 1.3em;
     }
 
-    .textp{
+    .textp {
       font-size: 18px;
     }
     .slick-slide > div {
@@ -291,7 +402,7 @@ const Wrapper = styled.div`
       justify-content: center;
       align-items: center;
       margin: 5em 0 2em 0;
-      padding: 1.5em 1em ;
+      padding: 1.5em 1em;
       border-radius: 15.934px;
       background: #fff;
       box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.42);
@@ -299,7 +410,7 @@ const Wrapper = styled.div`
       position: relative;
     }
 
-    img {
+    .user {
       position: absolute;
       top: -3em;
       right: 10.5em;
@@ -307,7 +418,7 @@ const Wrapper = styled.div`
     }
 
     .content {
-      gap: 0.5em;      
+      gap: 0.5em;
       margin-top: 2.8em;
     }
 
@@ -320,7 +431,7 @@ const Wrapper = styled.div`
       width: 40px;
       height: 40px;
       background: white;
-      color: black;      /* padding: 2.5em 1em; */
+      color: black; /* padding: 2.5em 1em; */
 
       border-radius: 50%;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);

@@ -26,6 +26,11 @@ import img from "../Assets/production/img.png";
 // consulting
 import consulting1 from "../Assets/consulting/cosulting.png";
 
+// projects
+import image1 from "../Assets/projects/img1.png";
+import image2 from "../Assets/projects/img2.png";
+import image3 from "../Assets/projects/img3.png";
+
 export const links = [
   {
     id: 1,
@@ -157,6 +162,30 @@ export const ourTeam = [
   },
 ];
 
+export const projects = [
+  {
+    id: 1,
+    images1: image1,
+    images2: image2,
+    images3: image3,
+    category: "production",
+  },
+  {
+    id: 2,
+    images1: image1,
+    images2: image2,
+    images3: image3,
+    category: "marketing",
+  },
+  {
+    id: 3,
+    images1: image1,
+    images2: image2,
+    images3: image3,
+    category: "consulting",
+  },
+];
+
 export const testimonail = [
   {
     id: 1,
@@ -180,8 +209,6 @@ export const testimonail = [
     position: "Graphic Designer",
   },
 ];
-
-
 
 export const sliderData = [
   {
