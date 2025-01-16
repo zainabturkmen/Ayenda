@@ -205,9 +205,11 @@ const Wrapper = styled.div`
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    width: 310;
+    width: 350px;
     margin: 0 auto;
     text-align: center;
+    gap: 2em;
+    padding: 1.5em 0;
   }
 
   .about-text {
@@ -227,14 +229,22 @@ const Wrapper = styled.div`
     font-weight: 200px;
   }
 
-  .bottom{
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-gap: 1em;
-  } 
-  
+  .top-about {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+
   .left,
   .right {
     display: flex;
