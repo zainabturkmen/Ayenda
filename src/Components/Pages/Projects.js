@@ -31,7 +31,7 @@ const Hero = () => {
 };
 
 const allCategories = [
-  "all",
+  "All",
   ...new Set(projects.map((project) => project.category)),
 ];
 console.log(allCategories);
@@ -40,16 +40,18 @@ const Projects = () => {
   // Projects Category
   const [menuItems, setMenueItems] = useState(projects);
   const [categories, setCategories] = useState(allCategories);
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const filterProjects = (category) => {
-    if (category === "all") {
+    if (category === "All") {
       setMenueItems(projects);
-      return;
+    } else {
+      const newProjects = projects.filter(
+        (project) => project.category === category
+      );
+      setMenueItems(newProjects);
     }
-    const newProjects = projects.filter(
-      (project) => project.category === category
-    );
-    setMenueItems(newProjects);
+    setActiveCategory(category); // Set active category on click
   };
 
   const NextArrow = ({ onClick }) => {
@@ -231,9 +233,17 @@ const Wrapper = styled.div`
   /* Projects */
 
   /* buttons */
-  .btn-container{
+  .btn-container {
     display: flex;
     gap: 2em;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+  }
+  .filter-btn {
+    border-bottom: 2px solid var(--primary-yellow-color);
+    color: var(--primary-yellow-color);
+    font-size: 1.1em;
   }
 
   /* Projects image  */
