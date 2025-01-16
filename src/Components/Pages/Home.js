@@ -66,8 +66,8 @@ const Home = () => {
             iaculis tincidunt. placerat velit. Donec in porttitor elit.
             Suspendisse accumsan iaculis tincidunt.{" "}
           </p>
-          <Link to="/services" className="explore">
-            Explore
+          <Link to="/services" className="Rean-more">
+            Read More
           </Link>
         </div>
         <div className="bottom">
@@ -189,6 +189,7 @@ const Wrapper = styled.div`
     color: white;
   }
 
+  .Rean-more,
   .explore {
     background-color: var(--primary-yellow-color);
     color: white;
@@ -320,6 +321,71 @@ const Wrapper = styled.div`
 
     .slick-dots li button:before {
       font-size: 12px;
+    }
+
+    .explore {
+      font-size: 0.4em;
+    }
+
+    .Rean-more{
+      font-size: 1em;
+    }
+    /*  */
+    /* about us */
+    .about-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 1300px;
+      margin: 0 auto;
+      gap: 2em;
+      padding: 4em 0;
+    }
+
+    .about-text {
+      color: #000;
+      font-size: 21px;
+      font-weight: 100px;
+      text-align: start;
+      width: 700px;
+      line-height: 1.6em;
+    }
+
+    h2 {
+      font-size: 36px;
+      text-align: start;
+    }
+    h3 {
+      font-size: 36px;
+    }
+    h4 {
+      font-family: "Poppins", serif;
+      font-weight: 200px;
+    }
+
+    .top-about {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      justify-content: start;
+      align-items: start;
+      text-align: start;
+    }
+
+    .bottom {
+      gap: 2em;
+    }
+
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .left {
+      margin-top: -2em;
     }
   }
 `;
