@@ -382,7 +382,9 @@ const Wrapper = styled.div`
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 7em;
+      gap: 3em;
+      width: 1000px;
+      margin: 0 auto;
     }
 
     .first-div {

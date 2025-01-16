@@ -37,27 +37,68 @@ const Home = () => {
   };
 
   return (
-    <SliderWrapper>
+    <Wrapper>
       <Slider {...settings}>
         {sliderData.map((slide) => (
           <div key={slide.id} className="slide">
             <div
               className="background"
-              style={{ backgroundImage: `url(${slide.image})` }}>
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
               <div className="text-overlay">
                 <h1>{slide.text}</h1>
                 <p>{slide.p}</p>
-                <Link to="/services" className="explore">Explore</Link>
+                <Link to="/services" className="explore">
+                  Explore
+                </Link>
               </div>
             </div>
           </div>
         ))}
       </Slider>
-    </SliderWrapper>
+      {/* About */}
+      <div className="about-container">
+        <div className="top-about">
+          <h2>About Us</h2>
+          <p className="about-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus
+            placerat velit. Donec in porttitor elit. Suspendisse accumsan
+            iaculis tincidunt. placerat velit. Donec in porttitor elit.
+            Suspendisse accumsan iaculis tincidunt.{" "}
+          </p>
+          <Link to="/services" className="explore">
+            Explore
+          </Link>
+        </div>
+        <div className="bottom">
+          <div className="left">
+            <div className="content1">
+              <h3>500 + </h3>
+              <h4>completed Projects</h4>
+            </div>
+            <div className="content2">
+              <h3>300 + </h3>
+              <h4>Happy Clients</h4>
+            </div>
+          </div>
+
+          <div className="right">
+            <div className="content2">
+              <h3>300 + </h3>
+              <h4>Happy Clients</h4>
+            </div>
+            <div className="content2">
+              <h3>300 + </h3>
+              <h4>Happy Clients</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
   );
 };
 
-const SliderWrapper = styled.div`
+const Wrapper = styled.div`
   .slide {
     position: relative;
     height: 30vh; /* Default height for mobile */
@@ -148,18 +189,83 @@ const SliderWrapper = styled.div`
     color: white;
   }
 
-  .explore{
+  .explore {
     background-color: var(--primary-yellow-color);
     color: white;
-    padding: .4em 1em;
+    padding: 0.5em 2em;
     text-align: center;
-    font-size: .4em;
+    font-size: 0.6em;
     border-radius: 10px;
     z-index: 10;
+  }
 
+  /* about us */
+  .about-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 310;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-text {
+    color: #000;
+    font-size: 16px;
+    font-weight: 100px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  h4 {
+    font-family: "Poppins", serif;
+    font-weight: 200px;
+  }
+
+  .bottom{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 1em;
   } 
   
-  
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .content1 {
+    border-radius: 5px;
+    background: var(--white, #fff);
+    box-shadow: 0px 4px 5px 0px #d9d9d9;
+    width: 152px;
+    height: 125px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content2 {
+    width: 152px;
+    height: 129px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(217, 217, 217, 0.18);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media (min-width: 768px) {
     /* Tablet and larger screens */
     .slide {
@@ -180,7 +286,7 @@ const SliderWrapper = styled.div`
       font-size: 10px;
     }
 
-    p{
+    p {
       width: 700px;
     }
   }
