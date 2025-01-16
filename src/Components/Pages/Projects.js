@@ -85,7 +85,7 @@ const Projects = () => {
           
         </div>
 
-        {/* Our Team */}
+        {/* Our Team */} 
         <div className="our-team">
             <h1>Our Team</h1>
             <p>Lets take a look to our professional team</p>
