@@ -71,7 +71,7 @@ const Home = () => {
             iaculis tincidunt. placerat velit. Donec in porttitor elit.
             Suspendisse accumsan iaculis tincidunt.{" "}
           </p>
-          <Link to="/services" className="Rean-more">
+          <Link to="/about" className="Rean-more">
             Read More
           </Link>
         </div>
@@ -102,9 +102,9 @@ const Home = () => {
 
       {/* Services */}
       <div className="services-container">
-        <h2>Our Services</h2>
+        <h2 className="service-h2">Our Services</h2>
 
-        <div classNamem="main-content">
+        <div className="main-content">
           <div className="first-row">
             <div className="services">
               <div className="content">
@@ -128,19 +128,20 @@ const Home = () => {
             </div>
           </div>
 
-          <div>
-            <div className="services">
-              <div className="content">
-                <img
-                  src={service1}
-                  alt="services image"
-                  className="service-img"
-                />
-              </div>
-              <h3 className="text-h3">Digital Marketing</h3>
+          <div className="services">
+            <div className="content">
+              <img
+                src={service1}
+                alt="services image"
+                className="service-img"
+              />
             </div>
+            <h3 className="text-h3">Digital Marketing</h3>
           </div>
         </div>
+        <Link to="/services" className="Rean-more">
+          Read More
+        </Link>
       </div>
     </Wrapper>
   );
@@ -241,7 +242,7 @@ const Wrapper = styled.div`
   .explore {
     background-color: var(--primary-yellow-color);
     color: #000;
-    padding: 0.5em 2em;
+    padding: 0.7em 2em;
     text-align: center;
     font-size: 0.6em;
     border-radius: 10px;
@@ -327,17 +328,14 @@ const Wrapper = styled.div`
 
   /* Services */
   .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em ;
     width: 350px;
     margin: 0 auto;
     text-align: center;
     padding: 2em 0;
-  }
-
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .first-row {
@@ -346,6 +344,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2em;
+    margin-top: -2em;
   }
 
   .services {
@@ -354,7 +353,11 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1em;
-    margin-top: 2.5em;
+    margin-top: 2em;
+    transition: all 0.3s linear;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .content {
@@ -493,13 +496,14 @@ const Wrapper = styled.div`
     /*  */
     /* Services */
     .services-container {
-      width: 1300px;
+      width: 1200px;
       margin: 0 auto;
     }
 
     .main-content {
       display: flex;
       flex-direction: row;
+      gap: 2em;
     }
 
     .first-row {
@@ -540,10 +544,12 @@ const Wrapper = styled.div`
     }
 
     .text-h3 {
-      font-size: 27px;
+      font-size: 24px;
       position: absolute;
-      /* bottom: -20em; */
-      margin-top: 10em;
+      margin-top: 11.3em;
+    }
+    .service-h2 {
+      text-align: center;
     }
   }
 `;
