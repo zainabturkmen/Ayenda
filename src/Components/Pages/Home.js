@@ -7,6 +7,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { sliderData } from "../data";
 import { Link } from "react-router-dom";
 
+// Services for Home
+import service1 from "../../Assets/services/service1.png";
+import service2 from "../../Assets/services/service2.png";
+import service3 from "../../Assets/services/service3.png";
+
 const Home = () => {
   const NextArrow = ({ onClick }) => {
     return (
@@ -90,6 +95,49 @@ const Home = () => {
             <div className="content2">
               <h3>300 + </h3>
               <h4>Happy Clients</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services */}
+      <div className="services-container">
+        <h2>Our Services</h2>
+
+        <div classNamem="main-content">
+          <div className="first-row">
+            <div className="services">
+              <div className="content">
+                <img
+                  src={service1}
+                  alt="services image"
+                  className="service-img"
+                />
+              </div>
+              <h3 className="text-h3">Digital Marketing</h3>
+            </div>
+            <div className="services">
+              <div className="content">
+                <img
+                  src={service1}
+                  alt="services image"
+                  className="service-img"
+                />
+              </div>
+              <h3 className="text-h3">Digital Marketing</h3>
+            </div>
+          </div>
+
+          <div>
+            <div className="services">
+              <div className="content">
+                <img
+                  src={service1}
+                  alt="services image"
+                  className="service-img"
+                />
+              </div>
+              <h3 className="text-h3">Digital Marketing</h3>
             </div>
           </div>
         </div>
@@ -192,7 +240,7 @@ const Wrapper = styled.div`
   .Rean-more,
   .explore {
     background-color: var(--primary-yellow-color);
-    color: white;
+    color: #000;
     padding: 0.5em 2em;
     text-align: center;
     font-size: 0.6em;
@@ -277,6 +325,59 @@ const Wrapper = styled.div`
     align-items: center;
   }
 
+  /* Services */
+  .services-container {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em 0;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2.5em;
+  }
+
+  .content {
+    border-radius: 10px;
+    background: var(--white, #fff);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    transform: rotate(-43.86deg);
+  }
+
+  .service-img {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    border-radius: 10px;
+  }
+
+  .text-h3 {
+    font-size: 16px;
+  }
+
   @media (min-width: 768px) {
     /* Tablet and larger screens */
     .slide {
@@ -326,8 +427,8 @@ const Wrapper = styled.div`
     .explore {
       font-size: 0.4em;
     }
-    
-    .Rean-more{
+
+    .Rean-more {
       font-size: 1.1em;
       padding: 0.5em 1em;
     }
@@ -387,6 +488,62 @@ const Wrapper = styled.div`
 
     .left {
       margin-top: -2em;
+    }
+
+    /*  */
+    /* Services */
+    .services-container {
+      width: 1300px;
+      margin: 0 auto;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .first-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      margin-top: 2.5em;
+    }
+
+    .content {
+      width: 382px;
+      height: 335px;
+      border-radius: 10px;
+      background: var(--white, #fff);
+      box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.1);
+      transform: rotate(0);
+      display: inline-flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .service-img {
+      width: 351px;
+      height: 259px;
+      border-radius: 10px;
+      background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+      margin-top: 1em;
+    }
+
+    .text-h3 {
+      font-size: 27px;
+      position: absolute;
+      /* bottom: -20em; */
+      margin-top: 10em;
     }
   }
 `;
