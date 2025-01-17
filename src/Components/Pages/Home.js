@@ -216,7 +216,7 @@ const Wrapper = styled.div`
   .about-text {
     color: #000;
     font-size: 16px;
-    font-weight: 100px;
+    font-weight: 300;
   }
 
   h2 {
@@ -326,9 +326,10 @@ const Wrapper = styled.div`
     .explore {
       font-size: 0.4em;
     }
-
+    
     .Rean-more{
-      font-size: 1em;
+      font-size: 1.1em;
+      padding: 0.5em 1em;
     }
     /*  */
     /* about us */
