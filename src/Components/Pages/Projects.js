@@ -75,6 +75,8 @@ const Projects = () => {
   var settings = {
     dots: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -128,22 +130,10 @@ const Projects = () => {
               return (
                 <div className="img-container">
                   <div className="first-div" key={id}>
-                    <img
-                      src={images1}
-                      alt="projects image"
-                      className="rotate-img"
-                    />
-                    <img
-                      src={images2}
-                      alt="projects image"
-                      className="rotate-img"
-                    />
+                    <img src={images1} alt="projects" className="rotate-img" />
+                    <img src={images2} alt="projects" className="rotate-img" />
                   </div>
-                  <img
-                    src={images3}
-                    alt="projects image"
-                    className="rotate-img"
-                  />
+                  <img src={images3} alt="projects" className="rotate-img" />
                 </div>
               );
             })}

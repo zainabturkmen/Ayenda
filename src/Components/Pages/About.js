@@ -7,8 +7,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 
-
-
 const About = () => {
   const NextArrow = ({ onClick }) => {
     return (
@@ -26,11 +24,13 @@ const About = () => {
     );
   };
 
-  const bigScreen = window.matchMedia("(min-width:1000px)")
+  const bigScreen = window.matchMedia("(min-width:1000px)");
 
   var settings = {
     dots: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -39,7 +39,7 @@ const About = () => {
   };
 
   if (bigScreen.matches) {
-    settings.slidesToShow = 2
+    settings.slidesToShow = 2;
   }
 
   return (
@@ -216,7 +216,7 @@ const Wrapper = styled.div`
   img {
     position: absolute;
     top: -3em;
-    right:5em;
+    right: 5em;
     width: 5em;
   }
 
@@ -269,16 +269,21 @@ const Wrapper = styled.div`
       max-width: 1400px;
       gap: 7em;
       margin-top: 2em;
-    }￼￼
-Home
-About
-Services
-Projects
-Blog
-Contact
-Services
-￼
-Lorem ipsum dolor sit amet, 
+    }
+    ￼￼
+      Home
+      About
+      Services
+      Projects
+      Blog
+      Contact
+      Services
+      ￼
+      Lorem
+      ipsum
+      dolor
+      sit
+      amet,
     h1 {
       font-size: 36px;
     }
