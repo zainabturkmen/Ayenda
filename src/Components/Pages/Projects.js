@@ -23,7 +23,7 @@ const Hero = () => {
       </p>
       <img
         src={dots}
-        alt="dots"
+        alt="Decorative dots"
         className="absolute -z-10 left-[-2em] top-[5em] md:w-[80%] md:left-[-4em] md:top-[2em]"
       />
     </div>
@@ -39,7 +39,9 @@ console.log(allCategories);
 const Projects = () => {
   // Projects Category
   const [menuItems, setMenueItems] = useState(projects);
-  const [categories, setCategories] = useState(allCategories);
+  // const [categories, setCategories] = useState(allCategories);
+  const categories = allCategories;
+
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filterProjects = (category) => {
