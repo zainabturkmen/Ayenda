@@ -31,6 +31,11 @@ import image1 from "../Assets/projects/img1.png";
 import image2 from "../Assets/projects/img2.png";
 import image3 from "../Assets/projects/img3.png";
 
+// Services for Home
+import service1 from "../Assets/services/service1.png";
+import service2 from "../Assets/services/service2.png";
+import service3 from "../Assets/services/service3.png";
+
 export const links = [
   {
     id: 1,
@@ -135,6 +140,77 @@ export const OurMission = [
     icon: <GoGoal />,
     h3: "Goal",
     text: "With a history of successful campaigns and satisfied clients, we deliver consistent, reliable, and high-quality.",
+  },
+];
+
+export const services = [
+  {
+    id: 1,
+    serviceImg1: service1,
+    serviceImg2: service2,
+    serviceImg3: service3,
+    text1: "Creative Production",
+    text2: "Digital Marketing",
+    text3: "Consulting",
+    urlText: "Explore All",
+    url: "/services",
+  },
+];
+
+export const AllServices = [
+  {
+    id: 1,
+    h1: "Digital Marketing",
+    serviceImg1: service1,
+    serviceImg2: service2,
+    serviceImg3: service3,
+    serviceImg4: service1,
+    serviceImg5: service2,
+    serviceImg6: service3,
+    text1: "SEO Services",
+    text2: "Social Media Marketing",
+    text3: "Content Marketing",
+    text4: "Paid Advertising",
+    text5: "Graphic Design",
+    text6: "Analytics & Reporting",
+    urlText: "Explore All",
+    url: "/services",
+  },
+  {
+    id: 2,
+    h1: "Creative Productions",
+    serviceImg1: service1,
+    serviceImg2: service2,
+    serviceImg3: service3,
+    serviceImg4: service1,
+    serviceImg5: service2,
+    serviceImg6: service3,
+    text1: "Videography",
+    text2: "Photography",
+    text3: "Event coverage",
+    text4: "Post-Production",
+    text5: "Branding Design",
+    text6: "Event Management",
+    urlText: "Explore All",
+    url: "/services",
+  },
+  {
+    id: 3,
+    h1: "Consulting",
+    serviceImg1: service1,
+    serviceImg2: service2,
+    serviceImg3: service3,
+    serviceImg4: service1,
+    serviceImg5: service2,
+    serviceImg6: service3,
+    text1: "Marketing Strategy",
+    text2: "Brand Identity Consulting",
+    text3: "Market Research",
+    text4: "Analytics Consulting",
+    text5: "Business Growth ",
+    text6: "Guidance to help",
+    urlText: "Explore All",
+    url: "/services",
   },
 ];
 

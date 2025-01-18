@@ -6,11 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { sliderData } from "../data";
 import { Link } from "react-router-dom";
-
-// Services for Home
-import service1 from "../../Assets/services/service1.png";
-import service2 from "../../Assets/services/service2.png";
-import service3 from "../../Assets/services/service3.png";
+import { services } from "../data";
 
 const Home = () => {
   const NextArrow = ({ onClick }) => {
@@ -101,48 +97,66 @@ const Home = () => {
       </div>
 
       {/* Services */}
-      <div className="services-container">
-        <h2 className="service-h2">Our Services</h2>
+      <div>
+        {services.map((s) => {
+          const {
+            id,
+            serviceImg1,
+            serviceImg2,
+            serviceImg3,
+            text1,
+            text2,
+            text3,
+            urlText,
+            url,
+          } = s;
+          return (
+            <div className="services-container">
+              <h2 className="service-h2">Our Services</h2>
+              <div className="main-content" key={id}>
+                <div className="first-row">
+                  <div className="services">
+                    <div className="content">
+                      <img
+                        src={serviceImg1}
+                        alt="services-image"
+                        className="service-img"
+                      />
+                    </div>
+                    <h3 className="text-h3">{text1}</h3>
+                  </div>
+                  <div className="services">
+                    <div className="content">
+                      <img
+                        src={serviceImg2}
+                        alt="services-image"
+                        className="service-img"
+                      />
+                    </div>
+                    <h3 className="text-h3">{text2}</h3>
+                  </div>
+                </div>
 
-        <div className="main-content">
-          <div className="first-row">
-            <div className="services">
-              <div className="content">
-                <img
-                  src={service1}
-                  alt="services image"
-                  className="service-img"
-                />
+                <div className="services">
+                  <div className="content">
+                    <img
+                      src={serviceImg3}
+                      alt="services-image"
+                      className="service-img"
+                    />
+                  </div>
+                  <h3 className="text-h3">{text3}</h3>
+                </div>
               </div>
-              <h3 className="text-h3">Digital Marketing</h3>
-            </div>
-            <div className="services">
-              <div className="content">
-                <img
-                  src={service1}
-                  alt="services image"
-                  className="service-img"
-                />
-              </div>
-              <h3 className="text-h3">Digital Marketing</h3>
-            </div>
-          </div>
 
-          <div className="services">
-            <div className="content">
-              <img
-                src={service1}
-                alt="services image"
-                className="service-img"
-              />
+              <Link to={url} className="Rean-more">
+                {urlText}
+              </Link>
             </div>
-            <h3 className="text-h3">Digital Marketing</h3>
-          </div>
-        </div>
-        <Link to="/services" className="Rean-more">
-          Read More
-        </Link>
+          );
+        })}
       </div>
+
     </Wrapper>
   );
 };
@@ -331,12 +345,13 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2em ;
+    gap: 2em;
     width: 350px;
     margin: 0 auto;
     text-align: center;
     padding: 2em 0;
   }
+
 
   .first-row {
     display: flex;
@@ -498,12 +513,14 @@ const Wrapper = styled.div`
     .services-container {
       width: 1200px;
       margin: 0 auto;
+      margin-top: 2em;
     }
 
     .main-content {
       display: flex;
       flex-direction: row;
       gap: 2em;
+      margin-top: -2em;
     }
 
     .first-row {
@@ -512,6 +529,7 @@ const Wrapper = styled.div`
       justify-content: center;
       align-items: center;
       gap: 2em;
+      margin-top: 0;
     }
 
     .services {
