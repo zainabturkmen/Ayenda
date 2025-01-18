@@ -120,7 +120,7 @@ const Wrapper = styled.div`
   /* Custom Arrows */
   .arrow {
     position: absolute;
-    top: 35%;
+    top: 50%;
     /* transform: translatey(-50%); */
     z-index: 1;
     width: 30px;
