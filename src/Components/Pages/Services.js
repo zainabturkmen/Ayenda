@@ -160,8 +160,9 @@ const Wrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 3em;
     margin-top: -2em;
+    width: 350px;
   }
 
   .services {
@@ -196,6 +197,7 @@ const Wrapper = styled.div`
 
   .text-h3 {
     font-size: 16px;
+    width: 10em;
   }
 
   .Rean-more {
