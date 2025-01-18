@@ -270,20 +270,7 @@ const Wrapper = styled.div`
       gap: 7em;
       margin-top: 2em;
     }
-    ￼￼
-      Home
-      About
-      Services
-      Projects
-      Blog
-      Contact
-      Services
-      ￼
-      Lorem
-      ipsum
-      dolor
-      sit
-      amet,
+
     h1 {
       font-size: 36px;
     }

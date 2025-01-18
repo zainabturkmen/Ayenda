@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { sliderData } from "../data";
 import { Link } from "react-router-dom";
 import { services } from "../data";
+import Portfolio from "../Portfolio";
 
 const Home = () => {
   const NextArrow = ({ onClick }) => {
@@ -156,7 +157,7 @@ const Home = () => {
           );
         })}
       </div>
-
+      <Portfolio />
     </Wrapper>
   );
 };
@@ -351,7 +352,6 @@ const Wrapper = styled.div`
     text-align: center;
     padding: 2em 0;
   }
-
 
   .first-row {
     display: flex;
