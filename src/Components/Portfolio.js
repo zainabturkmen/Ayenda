@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // All Images in our Portfolio
 
@@ -83,6 +84,9 @@ const Portfolio = () => {
               })}
             </Slider>
           </div>
+          <Link to="/projects" className="Rean-more">
+            Explore All
+          </Link>
         </div>
       </div>
     </Wrapper>
@@ -110,6 +114,7 @@ const Wrapper = styled.div`
 
   .main-div {
     margin-top: 1em;
+    margin-bottom: -1em;
   }
 
   /* Custom Arrows */
@@ -173,6 +178,11 @@ const Wrapper = styled.div`
       text-align: center;
       padding: 1em 0;
       height: 100%;
+    }
+
+    .main-div {
+      margin-top: 1em;
+      margin-bottom: 3em;
     }
 
     h2 {
