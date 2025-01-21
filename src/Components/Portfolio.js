@@ -120,7 +120,7 @@ const Wrapper = styled.div`
   /* Custom Arrows */
   .arroww {
     position: absolute;
-    top: 100%;
+    top: 30%;
     /* transform: translatey(-50%); */
     z-index: 1;
     width: 30px;
@@ -164,7 +164,7 @@ const Wrapper = styled.div`
       transform: scale(0.5);
       transition: transform 300ms;
       opacity: 0.7;
-      height: 100%;
+      /* height: 100%; */
     }
 
     .activeSlide {
@@ -176,14 +176,14 @@ const Wrapper = styled.div`
       width: 1200px;
       margin: 0 auto;
       text-align: center;
-      padding: 1em 0;
+      /* padding: 1em 0; */
       /* height: 50%; */
     }
 
     .main-div {
       margin-top: 1em;
       margin-bottom: 3em;
-      height: 100%;
+      /* height: 100%; */
     }
 
     h2 {
