@@ -120,7 +120,7 @@ const Wrapper = styled.div`
   /* Custom Arrows */
   .arrow {
     position: absolute;
-    top: 50%;
+    top: 100%;
     /* transform: translatey(-50%); */
     z-index: 1;
     width: 30px;
@@ -177,12 +177,13 @@ const Wrapper = styled.div`
       margin: 0 auto;
       text-align: center;
       padding: 1em 0;
-      height: 100%;
+      /* height: 50%; */
     }
 
     .main-div {
       margin-top: 1em;
       margin-bottom: 3em;
+      height: 50%;
     }
 
     h2 {

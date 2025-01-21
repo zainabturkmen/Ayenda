@@ -224,18 +224,23 @@ const Wrapper = styled.div`
     }
     h2 {
       font-size: 2em;
+      margin-bottom: -1em;
     }
     .services-container {
       max-width: 1200px;
       margin: 0 auto;
-      margin-top: 2em;
+      margin-top: 3em;
     }
 
     .main-content {
       display: flex;
       flex-direction: row;
-      gap: 2em;
-      margin-top: -2em;
+      justify-content: center;
+      align-items: center;
+      gap: 16em;
+      /* margin-top: -1em; */
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .first-row {
@@ -277,9 +282,10 @@ const Wrapper = styled.div`
     }
 
     .text-h3 {
-      font-size: 24px;
+      font-size: 21px;
       position: absolute;
-      margin-top: 11.3em;
+      margin-top: 13em;
+      width: 270px;
     }
     .service-h2 {
       text-align: center;
