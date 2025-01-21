@@ -25,7 +25,7 @@ const myPortfolio = [
 const Portfolio = () => {
   const NextArrow = ({ onClick }) => {
     return (
-      <div className="arrow next" onClick={onClick}>
+      <div className="arroww nextt" onClick={onClick}>
         <GrFormNext />
       </div>
     );
@@ -33,7 +33,7 @@ const Portfolio = () => {
 
   const PrevArrow = ({ onClick }) => {
     return (
-      <div className="arrow prev" onClick={onClick}>
+      <div className="arroww prevv" onClick={onClick}>
         <GrFormPrevious />
       </div>
     );
@@ -118,7 +118,7 @@ const Wrapper = styled.div`
   }
 
   /* Custom Arrows */
-  .arrow {
+  .arroww {
     position: absolute;
     top: 100%;
     /* transform: translatey(-50%); */
@@ -135,15 +135,15 @@ const Wrapper = styled.div`
     cursor: pointer;
   }
 
-  .arrow.next {
+  .arroww.nextt {
     right: -30px;
   }
 
-  .arrow.prev {
+  .arroww.prevv {
     left: -30px;
   }
 
-  .arrow:hover {
+  .arroww:hover {
     background: black;
     color: white;
   }
@@ -183,7 +183,7 @@ const Wrapper = styled.div`
     .main-div {
       margin-top: 1em;
       margin-bottom: 3em;
-      height: 50%;
+      height: 100%;
     }
 
     h2 {
@@ -194,7 +194,7 @@ const Wrapper = styled.div`
       margin: 0;
     }
 
-    .arrow {
+    .arroww {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -211,15 +211,15 @@ const Wrapper = styled.div`
       cursor: pointer;
     }
 
-    .arrow.next {
+    .arroww.nextt {
       right: -50px;
     }
 
-    .arrow.prev {
+    .arroww.prevv {
       left: -50px;
     }
 
-    .arrow:hover {
+    .arroww:hover {
       background: black;
       color: white;
     }
