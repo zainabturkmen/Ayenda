@@ -68,14 +68,14 @@ const Portfolio = () => {
       <div className="container">
         {/* Portfolio */}
         <div className="our-portfolio">
-          <h2>Portfolio</h2>
+          <h5>Portfolio</h5>
           <div className="main-div">
             <Slider {...settings}>
               {myPortfolio.map((i, index) => {
                 return (
                   <div
                     className={
-                      index === imageIndex ? "slide activeSlide" : "slide"
+                      index === imageIndex ? "slidee activeSlidee" : "slidee"
                     }
                   >
                     <img src={i} alt="Portfolio" />
@@ -95,7 +95,8 @@ const Portfolio = () => {
 
 const Wrapper = styled.div`
   margin: 2em 0;
-  .slide img {
+
+  .slidee img {
     width: 20rem;
     margin: 0 auto;
     border-radius: 5px;
@@ -148,26 +149,28 @@ const Wrapper = styled.div`
     color: white;
   }
 
-  .slick-list {
-    overflow: hidden;
+  h5 {
+    font-size: 1.5em;
   }
+
   @media (min-width: 1200px) {
     /* Custom Arrows */
 
-    .slide img {
+    img {
       width: 50rem;
       margin: 0 auto;
       border-radius: 10px;
+      /* height: 30vh; */
     }
 
-    .slide {
+    .slidee {
       transform: scale(0.5);
       transition: transform 300ms;
       opacity: 0.7;
-      /* height: 100%; */
+      /* height: 40vh; */
     }
 
-    .activeSlide {
+    .activeSlidee {
       transform: scale(1.1);
       opacity: 1;
     }
@@ -176,22 +179,16 @@ const Wrapper = styled.div`
       width: 1200px;
       margin: 0 auto;
       text-align: center;
-      /* padding: 1em 0; */
-      /* height: 50%; */
     }
 
     .main-div {
-      margin-top: 1em;
-      margin-bottom: 3em;
-      /* height: 100%; */
+      margin-top: 1.5em;
+      margin-bottom: 2.5em;
     }
 
-    h2 {
+    h5 {
       text-align: center;
-    }
-
-    .slick-slide > div {
-      margin: 0;
+      font-size: 2.5em;
     }
 
     .arroww {
