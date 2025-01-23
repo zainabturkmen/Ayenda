@@ -97,7 +97,7 @@ const Wrapper = styled.div`
   margin: 2em 0;
 
   .slidee img {
-    width: 20rem;
+    width: 18rem;
     margin: 0 auto;
     border-radius: 5px;
   }
@@ -114,14 +114,13 @@ const Wrapper = styled.div`
   }
 
   .main-div {
-    margin-top: 1em;
-    margin-bottom: -1em;
+    margin: 1em 0;
   }
 
   /* Custom Arrows */
   .arroww {
     position: absolute;
-    top: 30%;
+    top: 40%;
     /* transform: translatey(-50%); */
     z-index: 1;
     width: 30px;
@@ -137,11 +136,11 @@ const Wrapper = styled.div`
   }
 
   .arroww.nextt {
-    right: -30px;
+    right: -25px;
   }
 
   .arroww.prevv {
-    left: -30px;
+    left: -25px;
   }
 
   .arroww:hover {
