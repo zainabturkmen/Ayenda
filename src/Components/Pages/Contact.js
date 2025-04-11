@@ -60,12 +60,14 @@ const Contact = () => {
                 name="from_name"
                 placeholder="First Name"
                 className="firstName"
+                required
               />
               <input
                 type="text"
                 name="from_name"
                 placeholder="Last Name"
                 className="lastName"
+                required
               />
             </div>
             <input
@@ -73,12 +75,14 @@ const Contact = () => {
               name="from_email"
               placeholder="Email"
               className="email"
+              required
             />
             <input
               type="number"
               name="from_number"
               placeholder="Phone Number"
               className="number"
+              required
             />
             <textarea name="message" placeholder="message" />
             <button type="submit">submit</button>
