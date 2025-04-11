@@ -9,8 +9,8 @@ const VideoPlayer = () => {
       <h1 className="text-4xl font-bold mb-6 text-center">
         Amazing Case Study
       </h1>
-      <div className="flex flex-col md:flex-row justify-center items-start gap-8">
-        <div className="flex flex-col items-center cursor-pointer">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+        <div className="flex flex-col items-center cursor-pointer w-[40px] md:w-full ">
           <h2 className="text-2xl font-semibold mb-2">Cute Cat Video</h2>
           <ReactPlayer
             url={catVideo}
@@ -19,7 +19,7 @@ const VideoPlayer = () => {
             width="500px"
           />
         </div>
-        <div className="flex flex-col items-center cursor-pointer">
+        <div className="flex flex-col items-center cursor-pointer w-[40px] md:w-full">
           <h2 className="text-2xl font-semibold mb-2">Inspiring Speech</h2>
           <ReactPlayer
             url={speach}
