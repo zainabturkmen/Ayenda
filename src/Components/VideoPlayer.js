@@ -9,7 +9,7 @@ const VideoPlayer = () => {
       <h1 className="text-4xl font-bold mb-6 text-center">
         Amazing Case Study
       </h1>
-      <div className="flex flex-row justify-center items-start gap-8">
+      <div className="flex flex-col md:flex-row justify-center items-start gap-8">
         <div className="flex flex-col items-center cursor-pointer">
           <h2 className="text-2xl font-semibold mb-2">Cute Cat Video</h2>
           <ReactPlayer
