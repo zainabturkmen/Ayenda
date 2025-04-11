@@ -1,17 +1,29 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import catVideo from "../Assets/videos/cat_video.mp4";
+import speach from "../Assets/videos/speach.mp4";
 
 const VideoPlayer = () => {
   return (
-    <div>
-      <div className="container">
-        <div>
-          <h1>Amazing Case Study</h1>
+    <div className="p-6">
+      <h1 className="text-4xl font-bold mb-6 text-center">
+        Amazing Case Study
+      </h1>
+      <div className="flex flex-row justify-center items-start gap-8">
+        <div className="flex flex-col items-center">
+          <h2 className="text-2xl font-semibold mb-2">Cute Cat Video</h2>
           <ReactPlayer
-            dark={true}
-            controls={true}
             url={catVideo}
+            controls={true}
+            height="350px"
+            width="500px"
+          />
+        </div>
+        <div className="flex flex-col items-center">
+          <h2 className="text-2xl font-semibold mb-2">Inspiring Speech</h2>
+          <ReactPlayer
+            url={speach}
+            controls={true}
             height="350px"
             width="500px"
           />
