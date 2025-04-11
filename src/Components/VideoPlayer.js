@@ -10,7 +10,7 @@ const VideoPlayer = () => {
         Amazing Case Study
       </h1>
       <div className="flex flex-row justify-center items-start gap-8">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center cursor-pointer">
           <h2 className="text-2xl font-semibold mb-2">Cute Cat Video</h2>
           <ReactPlayer
             url={catVideo}
@@ -19,7 +19,7 @@ const VideoPlayer = () => {
             width="500px"
           />
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center cursor-pointer">
           <h2 className="text-2xl font-semibold mb-2">Inspiring Speech</h2>
           <ReactPlayer
             url={speach}
