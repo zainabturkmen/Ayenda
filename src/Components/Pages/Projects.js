@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import VideoPlayer from "../VideoPlayer";
 
 const Hero = () => {
   return (
@@ -142,6 +143,7 @@ const Projects = () => {
           </div>
         </div>
 
+        <VideoPlayer />
         {/* Our Team */}
         <div className="our-team">
           <h1>Our Team</h1>
