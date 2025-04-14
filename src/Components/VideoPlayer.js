@@ -5,10 +5,11 @@ import speach from "../Assets/videos/speach.mp4";
 
 const VideoPlayer = () => {
   return (
-    <div className="p-6 w-[1100px] m-auto">
-      <h1 className="text-3xl font-bold mb-6 text-center md:text-4xl w-[300px] mx-auto">
+    <div className="p-6 w-full max-w-[330px] mx-auto md:max-w-[1100px]">
+      <h1 className="text-2xl font-bold mb-6 text-center md:text-4xl w-full whitespace-nowrap">
         Amazing Case Study
       </h1>
+
       <div className="flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="flex flex-col items-center cursor-pointer w-[300px] md:w-[700px]">
           <h2 className="text-xl mb-2 md:text-2xl">Cute Cat Video</h2>
