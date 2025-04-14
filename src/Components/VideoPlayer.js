@@ -11,7 +11,7 @@ const VideoPlayer = () => {
       </h1>
       <div className="flex flex-col md:flex-row justify-center items-center gap-10">
         <div className="flex flex-col items-center cursor-pointer w-[300px] md:w-full ">
-          <h2 className="text-1xl font-semibold mb-2 md:text-2xl">Cute Cat Video</h2>
+          <h2 className="text-1xl mb-2 md:text-2xl">Cute Cat Video</h2>
           <ReactPlayer
             url={catVideo}
             controls={true}
@@ -20,7 +20,7 @@ const VideoPlayer = () => {
           />
         </div>
         <div className="flex flex-col items-center cursor-pointer w-[300px] md:w-full">
-          <h2 className="text-1xl font-semibold mb-2 md:text-2xl">Inspiring Speech</h2>
+          <h2 className="text-1xl mb-2 md:text-2xl">Inspiring Speech</h2>
           <ReactPlayer
             url={speach}
             controls={true}
