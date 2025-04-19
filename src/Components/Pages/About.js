@@ -51,21 +51,17 @@ const About = () => {
           <div className="our-story">
             <h1>Our Story</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              dapibus placerat velit. Donec in porttitor elit. Suspendisse
-              accumsan iaculis tincidunt. placerat velit. Donec in porttitor
-              elit. Suspendisse accumsan iaculis tincidunt. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Sed dapibus placerat velit.
-              Donec in porttitor elit. Suspendisse accumsan iaculis tincidunt.
-              placerat velit. Donec in porttitor elit. Suspendisse accumsan
-              iaculis tincidunt. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Sed dapibus placerat velit. Donec in porttitor
-              elit. Suspendisse accumsan iaculis tincidunt. placerat velit.
-              Donec in porttitor elit. Suspendisse accumsan iaculis tincidunt.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              dapibus placerat velit. Donec in porttitor elit. Suspendisse
-              accumsan iaculis tincidunt. placerat velit. Donec in porttitor
-              elit. Suspendisse accumsan iaculis tincidunt.{" "}
+              We are a creative-driven agency focused on helping brands stand
+              out, connect, and grow in today’s fast-paced digital world. Our
+              expertise spans Creative Production, Digital Marketing, and
+              Strategic Consulting, delivering end-to-end solutions designed to
+              elevate your brand and drive real results. From concept to
+              execution, we blend bold creativity with data-driven strategy —
+              producing compelling content, building powerful digital campaigns,
+              and offering insights that fuel smart business decisions. Whether
+              you're launching something new or looking to level up, we’re here
+              to bring clarity, creativity, and measurable impact to your
+              journey.
             </p>
           </div>
 
