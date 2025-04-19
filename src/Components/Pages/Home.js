@@ -63,10 +63,11 @@ const Home = () => {
         <div className="top-about">
           <h2>About Us</h2>
           <p className="about-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus
-            placerat velit. Donec in porttitor elit. Suspendisse accumsan
-            iaculis tincidunt. placerat velit. Donec in porttitor elit.
-            Suspendisse accumsan iaculis tincidunt.{" "}
+            At the intersection of creativity, strategy, and innovation — we
+            bring ideas to life and turn visions into results. We’re a
+            multidisciplinary team specializing in Creative Production, Digital
+            Marketing, and Consulting, helping brands craft compelling stories,
+            build meaningful connections, and grow with purpose.
           </p>
           <Link to="/about" className="Rean-more">
             Read More
