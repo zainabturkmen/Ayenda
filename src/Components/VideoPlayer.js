@@ -1,7 +1,7 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import catVideo from "../Assets/videos/cat_video.mp4";
-import speach from "../Assets/videos/speach.mp4";
+import elm from "../Assets/videos/Branding.mp4";
+import branding from "../Assets/videos/elm.mp4";
 
 const VideoPlayer = () => {
   return (
@@ -16,14 +16,14 @@ const VideoPlayer = () => {
           <div className="w-full aspect-video">
             {" "}
             {/* This keeps the correct aspect ratio */}
-            <ReactPlayer url={catVideo} controls width="100%" height="350px" />
+            <ReactPlayer url={elm} controls width="100%" height="350px" />
           </div>
         </div>
 
         <div className="flex flex-col items-center cursor-pointer w-[300px] md:w-[700px]">
           <h2 className="text-xl mb-2 md:text-2xl">Inspiring Speech</h2>
           <div className="w-full aspect-video">
-            <ReactPlayer url={speach} controls width="100%" height="350px" />
+            <ReactPlayer url={branding} controls width="100%" height="350px" />
           </div>
         </div>
       </div>
