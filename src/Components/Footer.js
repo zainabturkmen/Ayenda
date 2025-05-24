@@ -126,15 +126,12 @@ const Wrapper = styled.div`
 
   img {
     width: 10em;
-    margin-bottom: 0.6em;
+    margin-bottom: .6em;
+    margin-top: 1em;
   }
 
   h2 {
-    background: var(--main-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text; /* Optional fallback */
-    color: transparent;
+    color: #febf00;
     font-size: 21px;
     font-style: normal;
     font-weight: 400;
@@ -200,7 +197,7 @@ const Wrapper = styled.div`
       text-align: start;
       align-items: start;
       gap: 3em;
-      padding-top: 3em;
+      padding-top: 4em;
       margin-bottom: -1em;
     }
 
