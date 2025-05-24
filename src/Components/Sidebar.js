@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../Assets/Ayenda.png";
+import logo1 from "../Assets/logo1.png";
 import { LiaTimesSolid } from "react-icons/lia";
 import { FaCaretDown } from "react-icons/fa";
 import { links } from "./data";
@@ -22,7 +22,7 @@ const Sidebar = ({ toggleSidebar, isOpen }) => {
       <aside className={`${isOpen ? "sidebar show-sidebar" : "sidebar"}`}>
         {/* Sidebar Header */}
         <div className="header">
-          <img src={logo} alt="Logo" />
+          <img src={logo1} alt="Logo" />
           <button className="close-icon">
             <LiaTimesSolid onClick={toggleSidebar} />
           </button>
@@ -58,7 +58,8 @@ const Sidebar = ({ toggleSidebar, isOpen }) => {
                           onClick={() => {
                             closeDropdown();
                             toggleSidebar();
-                          }}>
+                          }}
+                        >
                           {sublink.text}
                         </NavLink>
                       ))}
@@ -73,7 +74,8 @@ const Sidebar = ({ toggleSidebar, isOpen }) => {
                 <NavLink
                   onClick={toggleSidebar}
                   to={url}
-                  className={({ isActive }) => (isActive ? "active" : "")}>
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
                   <span className="icon">{icon}</span>
                   {text}
                 </NavLink>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { links } from "./data";
 import { FaCaretDown } from "react-icons/fa";
-import logo from "../Assets/Ayenda.png";
+import logo1 from "../Assets/logo1.png";
 import { IoMenu } from "react-icons/io5";
 
 const Navbar = ({ toggleSidebar }) => {
@@ -24,7 +24,7 @@ const Navbar = ({ toggleSidebar }) => {
     <nav className="flex justify-between items-center mx-5 mt-2 mb-2 md:mx-20">
       {/* Header */}
       <div className="flex items-center justify-between w-full md:w-auto">
-        <img src={logo} alt="logo" className="w-12 md:w-20" />
+        <img src={logo1} alt="logo" className="w-12 md:w-[9em]" />
         <div className="text-2xl cursor-pointer md:hidden">
           <IoMenu onClick={toggleSidebar} />
         </div>
@@ -41,14 +41,16 @@ const Navbar = ({ toggleSidebar }) => {
                 key={id}
                 className="relative group"
                 onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}>
+                onMouseLeave={handleMouseLeave}
+              >
                 <NavLink
                   to={url}
                   className={({ isActive }) =>
                     `inline-flex items-center text-gray-900  hover:text-primary-yellow text-lg font-light ${
                       isActive ? " border-primary-yellow" : ""
                     }`
-                  }>
+                  }
+                >
                   {text}
                   <FaCaretDown className="ml-2 text-sm" />
                 </NavLink>
@@ -64,7 +66,8 @@ const Navbar = ({ toggleSidebar }) => {
                             isActive ? "text-primary-yellow" : ""
                           }`
                         }
-                        onClick={closeDropdown}>
+                        onClick={closeDropdown}
+                      >
                         {sublink.text}
                       </NavLink>
                     ))}
@@ -84,7 +87,8 @@ const Navbar = ({ toggleSidebar }) => {
                       ? "border-b-4 border-primary-yellow text-primary-yellow"
                       : ""
                   }`
-                }>
+                }
+              >
                 {text}
               </NavLink>
             </li>

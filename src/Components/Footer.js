@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import goldenLogo from "../Assets/golden.svg";
+import logo2 from "../Assets/logo2.png";
 import { SlLocationPin } from "react-icons/sl";
 import { MdOutlineEmail, MdOutlineLocalPhone } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="container1">
           {/* Ayenda */}
           <div className="div">
-            <img src={goldenLogo} alt="logo" />
+            <img src={logo2} alt="logo" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               dapibus placerat velit. Donec in porttitor elit. Suspendisse
@@ -125,7 +125,8 @@ const Wrapper = styled.div`
   }
 
   img {
-    width: 5em;
+    width: 10em;
+    margin-bottom: .6em;
   }
 
   h2 {
@@ -146,7 +147,7 @@ const Wrapper = styled.div`
   }
 
   p {
-    font-weight: 250;
+    font-weight: 300;
   }
 
   .icon-text {
