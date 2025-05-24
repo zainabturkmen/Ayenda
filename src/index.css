@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
@@ -6,11 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --primary-yellow-color: #febf00;
   --secondary-yellow-color: #ffdd7473;
-  --font-robot: "Roboto", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --main-gradient: linear-gradient(
+    90deg,
+    #ee4238 0%,
+    #ee4037 25%,
+    #f25a35 55.93%,
+    #f6ae42 100%
+  );
 }
 
 body {
@@ -18,4 +23,26 @@ body {
   font-family: "Poppins", serif;
 }
 
+.gradient-text {
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+  display: inline-flex;
+}
 
+.gradient-border-b-4 {
+  position: relative;
+}
+
+.gradient-border-b-4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--main-gradient);
+  border-radius: 2px;
+}

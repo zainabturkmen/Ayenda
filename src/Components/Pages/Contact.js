@@ -134,7 +134,12 @@ const Wrapper = styled.div`
     gap: 0.5em;
   }
   h2 {
-    color: var(--primary-yellow-color, #febf00);
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+    color: transparent;
+    display: inline-flex;
     font-size: 21px;
     font-weight: 400;
     line-height: 172%; /* 36.12px */
@@ -204,11 +209,11 @@ const Wrapper = styled.div`
     height: 47px;
     padding: 12px 14px;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background: var(--primary-yellow-color, #febf00);
+    background: var(--main-gradient);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
     color: white;
     cursor: pointer;
+    font-size: 1.2em;
   }
 
   @media (min-width: 1000px) {

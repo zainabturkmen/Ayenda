@@ -119,7 +119,7 @@ const Wrapper = styled.div`
   }
 
   .header img {
-    width: 50px;
+    width: 100px;
   }
 
   .close-icon {
@@ -192,11 +192,21 @@ const Wrapper = styled.div`
 
   .dropdown-link:hover {
     background: #f9f9f9; /* Adds hover background effect */
-    color: #ffd700;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+    color: transparent;
+    display: inline-flex;
   }
 
   .dropdown-active {
-    color: #ffd700; /* Highlights active dropdown links */
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+    color: transparent;
+    display: inline-flex;
   }
 
   .dropdown-icon {

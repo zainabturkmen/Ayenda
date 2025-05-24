@@ -126,11 +126,15 @@ const Wrapper = styled.div`
 
   img {
     width: 10em;
-    margin-bottom: .6em;
+    margin-bottom: 0.6em;
   }
 
   h2 {
-    color: #febf00;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Optional fallback */
+    color: transparent;
     font-size: 21px;
     font-style: normal;
     font-weight: 400;

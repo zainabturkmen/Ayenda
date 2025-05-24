@@ -6,8 +6,9 @@ const Hero = () => {
   return (
     <div
       className="relative flex justify-center items-center h-[20vh] bg-cover bg-center bg-no-repeat md:h-[35vh]"
-      style={{ backgroundImage: `url(${backimg})` }}>
-      <h1 className="text-center text-[21px] font-normal leading-[172%] text-primary-yellow md:text-[47px]">
+      style={{ backgroundImage: `url(${backimg})` }}
+    >
+      <h1 className="text-center text-[21px] font-normal leading-[172%] gradient-text md:text-[50px] md:font-semibold">
         Discover About Us
       </h1>
       <img

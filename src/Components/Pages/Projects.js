@@ -16,7 +16,7 @@ const Hero = () => {
       className="relative flex flex-col justify-center items-center h-[20vh] bg-cover bg-center bg-no-repeat md:h-[35vh]"
       style={{ backgroundImage: `url(${backimg})` }}
     >
-      <h1 className="text-center text-[21px] font-normal leading-[172%] text-primary-yellow md:text-[47px]">
+      <h1 className="text-center text-[21px] font-bold leading-[172%] gradient-text md:text-[47px] md:font-bold">
         Discover Our Projects
       </h1>
       <p className="text-white w-1/1 text-center text-[12px] md:text-[20px]">
@@ -220,10 +220,11 @@ const Wrapper = styled.div`
   }
 
   .link {
-    background-color: var(--primary-yellow-color);
+    background: var(--main-gradient);
     padding: 0.5em 1em;
     border-radius: 10px;
     margin-top: 1em;
+    color: #fff;
   }
 
   /* Projects */
@@ -242,9 +243,23 @@ const Wrapper = styled.div`
   }
 
   .filter-btn.active {
+    position: relative;
+    color: transparent;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
     transition: all 0.3s ease;
-    border-bottom: 2px solid var(--primary-yellow-color);
-    color: var(--primary-yellow-color);
+  }
+
+  .filter-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--main-gradient);
+    border-radius: 1px;
   }
 
   /* Projects image  */

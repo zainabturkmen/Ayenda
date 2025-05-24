@@ -8,13 +8,13 @@ const Hero = () => {
   return (
     <div
       className="relative flex flex-col justify-center items-center h-[20vh] bg-cover bg-center bg-no-repeat md:h-[35vh]"
-      style={{ backgroundImage: `url(${backimg})` }}>
-      <h1 className="text-center text-[21px] font-normal leading-[172%] text-primary-yellow md:text-[47px]">
+      style={{ backgroundImage: `url(${backimg})` }}
+    >
+      <h1 className="text-center text-[21px] font-bold leading-[172%] gradient-text md:text-[47px] md:font-bold">
         Discover Our Blogs
       </h1>
       <p className="text-white w-1/1 text-center text-[12px] md:text-[20px]">
-        Explore our Blogs in production, marketing, and 
-        consulting
+        Explore our Blogs in production, marketing, and consulting
       </p>
       <img
         src={dots}

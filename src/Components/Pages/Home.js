@@ -207,7 +207,11 @@ const Wrapper = styled.div`
   }
 
   h1 {
-    color: var(--primary-yellow-color);
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+    color: transparent;
     font-size: 1em; /* Smaller font size for mobile */
     font-weight: bold;
     text-align: center;
@@ -256,8 +260,8 @@ const Wrapper = styled.div`
 
   .Rean-more,
   .explore {
-    background-color: var(--primary-yellow-color);
-    color: #000;
+    background: var(--main-gradient);
+    color: #ffff;
     padding: 0.7em 2em;
     text-align: center;
     font-size: 0.6em;
