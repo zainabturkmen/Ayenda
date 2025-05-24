@@ -180,21 +180,21 @@ const Wrapper = styled.div`
   }
 
   .icon {
-    background-color: #fff; /* White background */
-    color: #000; /* Black color for the icon */
-    padding: 0.5em; /* Padding around the icon */
-    border-radius: 50%; /* Rounded border */
-    display: inline-flex; /* Align icon properly */
-    justify-content: center; /* Center the icon horizontally */
-    align-items: center; /* Center the icon vertically */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Optional shadow for better visibility */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+    background-color: #fff; 
+    color: #000; 
+    padding: 0.5em; 
+    border-radius: 50%; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out; 
   }
 
   .icon:hover {
-    background-color: #000; /* Black background on hover */
-    color: #fff; /* White icon color on hover */
+    background-color: #000; 
+    color: #fff; 
   }
 
   @media (min-width: 1000px) {
