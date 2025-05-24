@@ -24,7 +24,7 @@ const Navbar = ({ toggleSidebar }) => {
     <nav className="flex justify-between items-center mx-5 mt-2 mb-2 md:mx-20">
       {/* Header */}
       <div className="flex items-center justify-between w-full md:w-auto">
-        <img src={logo1} alt="logo" className="w-12 md:w-[8em]" />
+        <img src={logo1} alt="logo" className="w-[6em] md:w-[8em]" />
         <div className="text-2xl cursor-pointer md:hidden">
           <IoMenu onClick={toggleSidebar} />
         </div>
