@@ -125,7 +125,7 @@ const Wrapper = styled.div`
   }
 
   img {
-    width: 10em;
+    width: 8em;
     margin-bottom: 0.6em;
     margin-top: 1em;
   }
@@ -215,6 +215,11 @@ const Wrapper = styled.div`
 
     p {
       margin-top: -1em;
+    }
+
+    img{
+      margin-top: 0;
+      width: 10em;
     }
   }
 `;
